@@ -1,0 +1,13 @@
+#!/bin/bash
+# Launcher for Black with transparent option
+
+# DEPENDENCIES
+# black
+
+# Determine Application absolute path
+LAUNCHER_FULL_PATH="$(realpath "$0")"
+LAUNCHER_NAME="$(basename "$0")"
+APP_PATH="${LAUNCHER_FULL_PATH::(-${#LAUNCHER_NAME})}"
+
+cd "${APP_PATH}"
+./black transparent
